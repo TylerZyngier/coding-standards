@@ -36,6 +36,8 @@
 
     // Avoid
     public static const string SHIPPINGTYPE = "DropShip";
+    
+    
 
 
 
