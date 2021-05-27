@@ -1,70 +1,68 @@
-# Do: use PascalCasing for class names and method names.
-    public class ClientActivity {
-        public void ClearStatistics() {
-            //...
-        }
-        public void CalculateStatistics() {
-            //...
-        }
-    }
+# Class variable naming conventions
+# Use [Serialize Field] on same line preceding variable
+    const varType VarName;
+    public varType varName;
+    private varType _varName;
+    internal varType varName;
     
-# Do: use camelCasing for local variables and method arguments.
-    public class UserLog {
-        public void Add(LogEvent logEvent) {
-            int itemCount = logEvent.Items.Count;
-            // ...
-        }
-    }
+    [Seralize Field] private varType varName;
+
+# Seperate class variable groupings by whitespace
+    const varType VarName;
+    const varType VarName;
+    const varType VarName;
     
-# Do not: use Hungarian notation or any other type identification in identifiers
+    public varType varName;
+    public varType varName;
+    
+    private varType _varName;
+    
+    internal varType varName;
+    internal varType varName;
+    internal varType varName;
+    
+# Do not use Hungarian notation or any other type identification in identifiers
     // Correct
-    int counter;
+    int name;
     string name;
 
     // Avoid
-    int iCounter;
+    int iName;
     string strName;
   
-# Do not: use Screaming Caps for constants or readonly variables
+# Do not use Screaming Caps for constants or readonly variables
     // Correct
-    public static const string ShippingType = "DropShip";
+    public static const string StringName = "StringValue";
 
     // Avoid
-    public static const string SHIPPINGTYPE = "DropShip";
+    public static const string STRINGNAME = "StringValue";
     
-# Avoid: using Abbreviations. Exceptions: abbreviations commonly used as names, such as Id, Xml, Ftp, Uri
+# Avoid using Abbreviations. Exceptions: abbreviations commonly used as names, such as Id
     // Correct
-    UserGroup userGroup;
-    Assignment employeeAssignment;
+    WeaponType weaponType;
+    EnemyType enemyType;
 
     // Avoid
-    UserGroup usrGrp;
-    Assignment empAssignment;
+    WeaponType wpnType;
+    EnemyType enmyType;
 
     // Exceptions
-    CustomerId customerId;
-    XmlDocument xmlDocument;
-    FtpHelper ftpHelper;
-    UriPart uriPart;
+    ItemId itemId;
+    {there are of course other exceptions that I can't think of right now}
 
-# Do: use PascalCasing for abbreviations 3 characters or more (2 chars are both uppercase)
-    HtmlHelper htmlHelper;
-    FtpTransfer ftpTransfer;
-    UIControl uiControl;
-
-# Do not: use Underscores in identifiers. Exception: you can prefix private static variables with an underscore.
+# Do not use Underscores in identifiers. Exception: you can prefix private variables with an underscore.
     // Correct
-    public DateTime clientAppointment;
-    public TimeSpan timeLeft;
+    public WeaponType weaponType;
+    public EnemyType enemyType;
 
     // Avoid
-    public DateTime client_Appointment;
-    public TimeSpan time_Left;
+    public WeaponType weapon_Type;
+    public EnemyType enemy_Type;
 
     // Exception
-    private DateTime _registrationDate;
+    private WeaponType _weaponType;
 
-# Do: use predefined type names instead of system type names like Int16, Single, UInt64, etc     
+# Use predefined type names instead of system type names like Int16, Single, UInt64, etc     
     // Correct
     string firstName;
     int lastIndex;
@@ -75,140 +73,21 @@
     Int32 lastIndex;
     Boolean isSaved;
 
-# Do: use implicit type var for local variable declarations. Exception: primitive types (int, string, double, etc) use predefined names.
-    var stream = File.Create(path);
-    var customers = new Dictionary();
-
-    // Exceptions
-    int index = 100;
-    string timeSheet;
-    bool isCompleted;
-
-# Do: use noun or noun phrases to name a class.
-    public class Employee {
-        //...
-    }
-    
-    public class BusinessLocation {
-        //...
-    }
-    
-    public class DocumentCollection {
-        //...
-    }
-
-# Do: prefix interfaces with the letter I.  Interface names are noun (phrases) or adjectives.
-    public interface IShape {
-        //...
-    }
-    
-    public interface IShapeCollection {
-        //...
-    }
-    
-    public interface IGroupable {
-        //...
-    }
-    
-# Do: name source files according to their main classes. Exception: file names with partial classes reflect their source or purpose, e.g. designer, generated, etc.
-    // Located in Task.cs
-    public partial class Task {
-        //...
-    }
-    
-    // Located in Task.generated.cs
-    public partial class Task {
-        //...
-    }
-    
-# Do: organize namespaces with a clearly defined structure
-    // Examples
-    namespace Company.Product.Module.SubModule
-    namespace Product.Module.Component
-    namespace Product.Layer.Module.Group
-    
-# Do: vertically align curly brackets.
-    // Correct
-    class Program {
-        static void Main(string[] args) {
-            //...
-        }
-    }
-    
-# Do: declare all member variables at the top of a class, with static variables at the very top.
-    // Correct
-    public class Account {
-        public static string BankName;
-        public static decimal Reserves;
-
-        public string Number { get; set; }
-        public DateTime DateOpened { get; set; }
-        public DateTime DateClosed { get; set; }
-        public decimal Balance { get; set; }
-
-        // Constructor
-        public Account() {
-            // ...
+# Use PascalCasing for class names, method names and namespaces
+# Use same line brackets
+    namespace SlinkyUtils.Player.Combat {
+        public class ClassName {
+            public void MethodName() {
+                //...
+            }
+            public void MethodName() {
+                //...
+            }
         }
     }
 
-# Do: use singular names for enums. Exception: bit field enums.
-    // Correct
-    public enum Color {
-        Red,
-        Green,
-        Blue,
-        Yellow,
-        Magenta,
-        Cyan
-    }
-
-    // Exception
-    [Flags]
-    public enum Dockings {
-        None = 0,
-        Top = 1, 
-        Right = 2, 
-        Bottom = 4,
-        Left = 8
-    }
-    
-# Do not: explicitly specify a type of an enum or values of enums (except bit fields)
-    // Don't
-    public enum Direction : long
-    {
-        North = 1,
-        East = 2,
-        South = 3,
-        West = 4
-    }
-
-    // Correct
-    public enum Direction
-    {
-        North,
-        East,
-        South,
-        West
-    }
-    
-# Do not: suffix enum names with Enum
-    // Don't
-    public enum CoinEnum
-    {
-        Penny,
-        Nickel,
-        Dime,
-        Quarter,
-        Dollar
-    }
-
-    // Correct
-    public enum Coin
-    {
-        Penny,
-        Nickel,
-        Dime,
-        Quarter,
-        Dollar
+# Use camelCasing for local variables and method arguments
+# Use var keyword over specific variable type in local variables
+    public void MethodName(VarType varName) {
+        var itemCount = varName.Items.Count;
     }
