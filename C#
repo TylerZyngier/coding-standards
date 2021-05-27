@@ -1,0 +1,42 @@
+# Do: use PascalCasing for class names and method names.
+    public class ClientActivity
+    {
+        public void ClearStatistics()
+        {
+            //...
+        }
+        public void CalculateStatistics()
+        {
+            //...
+        }
+    }
+    
+# Do: use camelCasing for local variables and method arguments.
+    public class UserLog
+    {
+        public void Add(LogEvent logEvent)
+        {
+            int itemCount = logEvent.Items.Count;
+            // ...
+        }
+    }
+    
+# Do not: use Hungarian notation or any other type identification in identifiers
+    // Correct
+    int counter;
+    string name;
+
+    // Avoid
+    int iCounter;
+    string strName;
+  
+# Do not: use Screaming Caps for constants or readonly variables
+    // Correct
+    public static const string ShippingType = "DropShip";
+
+    // Avoid
+    public static const string SHIPPINGTYPE = "DropShip";
+
+
+
+
