@@ -1,4 +1,4 @@
-# Class variable naming conventions
+## Class variable naming conventions
 # Use [Serialize Field] on same line preceding variable
     const varType VarName;
     public varType varName;
