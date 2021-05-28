@@ -1,5 +1,5 @@
 ## Class variable naming conventions
-# Use [Serialize Field] on same line preceding variable
+## Use [Serialize Field] on same line preceding variable
     const varType VarName;
     public varType varName;
     private varType _varName;
@@ -7,7 +7,7 @@
     
     [Seralize Field] private varType varName;
 
-# Seperate class variable groupings by whitespace
+## Seperate class variable groupings by whitespace
     const varType VarName;
     const varType VarName;
     const varType VarName;
@@ -21,7 +21,7 @@
     internal varType varName;
     internal varType varName;
     
-# Do not use Hungarian notation or any other type identification in identifiers
+## Do not use Hungarian notation or any other type identification in identifiers
     // Correct
     int name;
     string name;
@@ -30,14 +30,14 @@
     int iName;
     string strName;
   
-# Do not use Screaming Caps for constants or readonly variables
+## Do not use Screaming Caps for constants or readonly variables
     // Correct
     public static const string StringName = "StringValue";
 
     // Avoid
     public static const string STRINGNAME = "StringValue";
     
-# Avoid using Abbreviations. Exceptions: abbreviations commonly used as names, such as Id
+## Avoid using Abbreviations. Exceptions: abbreviations commonly used as names, such as Id
     // Correct
     WeaponType weaponType;
     EnemyType enemyType;
@@ -50,7 +50,7 @@
     ItemId itemId;
     {there are of course other exceptions that I can't think of right now}
 
-# Do not use Underscores in identifiers. Exception: you can prefix private variables with an underscore.
+## Do not use Underscores in identifiers. Exception: you can prefix private variables with an underscore.
     // Correct
     public WeaponType weaponType;
     public EnemyType enemyType;
@@ -62,7 +62,7 @@
     // Exception
     private WeaponType _weaponType;
 
-# Use predefined type names instead of system type names like Int16, Single, UInt64, etc     
+## Use predefined type names instead of system type names like Int16, Single, UInt64, etc     
     // Correct
     string firstName;
     int lastIndex;
@@ -73,8 +73,8 @@
     Int32 lastIndex;
     Boolean isSaved;
 
-# Use PascalCasing for class names, method names and namespaces
-# Use same line brackets
+## Use PascalCasing for class names, method names and namespaces
+## Use same line brackets
     namespace SlinkyUtils.Player.Combat {
         public class ClassName {
             public void MethodName() {
@@ -86,8 +86,8 @@
         }
     }
 
-# Use camelCasing for local variables and method arguments
-# Use var keyword over specific variable type in local variables
+## Use camelCasing for local variables and method arguments
+## Use var keyword over specific variable type in local variables
     public void MethodName(VarType varName) {
         var itemCount = varName.Items.Count;
     }
