@@ -37,7 +37,7 @@
     // Avoid
     public static const string STRINGNAME = "StringValue";
     
-### Avoid using Abbreviations. Exceptions: abbreviations commonly used as names, such as Id
+### Avoid using Abbreviations. Exceptions: abbreviations commonly used as names, such as Id, rb, and anim
     // Correct
     WeaponType weaponType;
     EnemyType enemyType;
@@ -48,6 +48,8 @@
 
     // Exceptions
     ItemId itemId;
+    Rigidbody2D rb;
+    Animator anim;
     {there are of course other exceptions that I can't think of right now}
 
 ### Do not use Underscores in identifiers. Exception: you can prefix private variables with an underscore.
