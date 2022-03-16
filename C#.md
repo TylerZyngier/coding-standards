@@ -1,9 +1,9 @@
 # These standards are geared towards Unity development as that is my main C# use case
 
-## Class variables
-### Seperate class variable groupings by whitespace
-### Order access modifiers as seen below
-### Use '[SerializeField] private' rather than 'public' as often as possible
+## Variables
+### Access Modifiers
+#### Order access modifiers as seen below
+#### Use '[SerializeField] private' rather than 'public' modifier as often as possible
     public static varType varName;
     
     public varType varName;
@@ -14,7 +14,9 @@
     
     private varType _varName;
 
-### Seperate 
+### Naming Conventions
+
+### Local Variables
     
 ### Do not use Hungarian notation or any other type identification in identifiers
     // Correct
