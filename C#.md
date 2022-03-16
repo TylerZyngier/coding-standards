@@ -18,7 +18,7 @@
 
 ### Local Variables
     
-### Do not use Hungarian notation or any other type identification in identifiers
+#### Do not use Hungarian notation or any other type identification in identifiers
     // Correct
     int name;
     string name;
@@ -27,14 +27,14 @@
     int iName;
     string strName;
   
-### Do not use Screaming Caps for constants or readonly variables
+#### Do not use Screaming Caps for constants or readonly variables
     // Correct
     public static const string StringName = "StringValue";
 
     // Avoid
     public static const string STRINGNAME = "StringValue";
     
-### Avoid using Abbreviations. Exceptions: abbreviations commonly used as names, such as Id, rb, and anim
+#### Avoid using Abbreviations. Exceptions: abbreviations commonly used as names, such as Id, rb, and anim
     // Correct
     WeaponType weaponType;
     EnemyType enemyType;
@@ -49,7 +49,8 @@
     Animator anim;
     {there are of course other exceptions that I can't think of right now}
 
-### Do not use Underscores in identifiers. Exception: you can prefix private variables with an underscore.
+#### Do not use Underscores in identifiers. 
+##### Exception: you can prefix private variables with an underscore.
     // Correct
     public WeaponType weaponType;
     public EnemyType enemyType;
@@ -61,7 +62,7 @@
     // Exception
     private WeaponType _weaponType;
 
-### Use predefined type names instead of system type names like Int16, Single, UInt64, etc     
+#### Use predefined type names instead of system type names like Int16, Single, UInt64, etc     
     // Correct
     string firstName;
     int lastIndex;
