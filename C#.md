@@ -179,7 +179,7 @@ private bool MethodName()
 ### Return Statment
 Statements that just return something should all be on the same line
 
-Do these
+#### Do these
 
 ```C#
 if (gameObject == null) return;
@@ -195,7 +195,7 @@ public Vector3 MethodName(GameObject originObject, Target targetObject)
 ```
 
 
-Avoid these
+#### Avoid these
 
 ```C#
 if (gameObject == null) 
