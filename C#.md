@@ -72,41 +72,8 @@
     Int32 lastIndex;
     Boolean isSaved;
 
-### Use PascalCasing for class names, method names and namespaces
-### Use next line brackets
-    namespace Slinky.Player.Combat 
-    {
-        public class ClassName 
-        {
-            public void MethodName() 
-            {
-                //...
-            }
-        }
-    }
+## Namespaces
 
+## Classes
 
-### Local Variables
-### Use camelCase for local variables and method arguments
-### Use specific variable keywords (ie. 'float', 'bool', 'int', 'GameObject', etc.) rather than 'var' when using local variables
-    public void MethodName(VarType varName) {
-        var itemCount = varName.Items.Count;
-    }
-
-
-### Use root namespace for all scripts
-    namespace Slinky.Player.Combat 
-    {
-        public class ClassName 
-        {
-            //...
-        }
-    }
-
-    namespace Slinky.LevelManagement 
-    {
-        public class ClassName 
-        {
-            //...
-        }
-    }
+## Methods
