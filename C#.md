@@ -43,8 +43,7 @@ public static const string StringName = "StringValue";
 public static const string STRINGNAME = "StringValue";
 ```
 
-#### Avoid using Abbreviations.
-
+Avoid using Abbreviations  
 ***Exceptions:** abbreviations commonly used as names, such as Id, rb, and anim*
 
 ```C#
@@ -60,9 +59,9 @@ EnemyType enmyType;
 ItemId itemId;
 Rigidbody2D rb;
 Animator anim;
-
-// There are of course other exceptions that I can't think of right now
 ```
+
+: *There are of course other exceptions that I can't think of right now*
 
 #### Do not use Underscores in identifiers. 
 **Exceptions:* you can prefix private variables with an underscore.*
