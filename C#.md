@@ -169,8 +169,10 @@ This includes code with a return type such as bool, int, float, etc.
 ```C#
 private void MethodName()
     => //...
+```
 
-private bool MethodName()
+```C#
+private Bool MethodName()
     => //...
 ```
 
@@ -220,5 +222,3 @@ public Vector3 MethodName(GameObject originObject, Target targetObject)
     return originObject.transform.position - targetObject.transform.position;
 }
 ```
-
-Statements that contain 
