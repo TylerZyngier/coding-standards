@@ -4,8 +4,9 @@
 ## Variables
 
 ### Access Modifiers
+Access modifiers should be ordered as seen below  
+Use '[SerializeField] private' rather than 'public' modifier as often as possible
 
-#### Order access modifiers as seen below Use '[SerializeField] private' rather than 'public' modifier as often as possible
 ```C#
 public static varType varName;
     
