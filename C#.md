@@ -100,7 +100,7 @@ Namespaces should follow file-system structure aka. file folder names
 ```C#
 // Example of a file at 'Enemy.cs' at 'Scripts/Entities/Enemies/' would have the namespace [RootNamespace]/Entities.Enemies
 namespace Slinky.Entities.Enemies {
-
+    //...
 }
 ```
 
@@ -122,5 +122,44 @@ using LevelLoading.ScriptableObjects;
 ```
 
 ## Classes
+
+### Class sectioning
+Classes are sectioned off into 2 major sections Variables and Methods   
+The 'Methods' section is divided into 2 sub-categories, Unity Methods and Custom Methods  
+Sections are defined by commenting '/// <Description> *Section Name* </Description>'
+```C#
+/// <Description> Variables </Description>
+
+public static LevelLoader instance;
+
+public static Action OnLoadingStarted;
+public static Action OnLoadingFinished;
+
+private bool loadingLevel;
+
+/// <Description> Methods </Description>
+/// <Description> Unity Methods </Description>
+
+private void Awake()
+{
+    if (instance == null)
+    {
+        instance = this;
+    }
+    else
+    {
+        Destroy(this.gameObject);
+    }
+}
+
+/// <Description> Custom Methods </Description>
+
+public void LoadNextLevel(bool loadingScreen = true)
+{
+    int nextSceneIndex = Utils.GlobalFunctions.GetActiveSceneIndex() + 1;
+
+    LoadLevel(nextSceneIndex, loadingScreen);
+}
+```
 
 ## Methods
