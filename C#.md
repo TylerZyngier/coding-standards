@@ -95,7 +95,7 @@ Boolean isSaved;
 ## Namespaces
 
 ### Namespace structuring
-Namespaces should follow file system structure
+Namespaces should follow file-system structure aka. file folder names
 
 ```C#
 // Example of a file at 'Enemy.cs' at 'Scripts/Entities/Enemies/' would have the namespace [RootNamespace]/Entities.Enemies
