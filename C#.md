@@ -56,14 +56,12 @@ WeaponType wpnType;
 EnemyType enmyType;
 
 // Exceptions
-ItemId itemId;
 Rigidbody2D rb;
 Animator anim;
+// More general exceptions include: id, sfx, ui, max, min
 ```
 
-: *There are of course other exceptions that I can't think of right now*
-
-#### Do not use Underscores in identifiers. 
+Do not use Underscores in identifiers. 
 **Exceptions:* you can prefix private variables with an underscore.*
 
 ```C#
