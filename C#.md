@@ -85,7 +85,15 @@ Int32 lastIndex;
 Boolean isSaved;
 ```
 
-## Namespaces
+## Namespace
+#### Namespaces should follow file system structure
+```C#
+// Ex. the file 'Enemy.cs' at 'Scripts/Entities/Enemies/' would have the namespace [Root]/Entities.Enemies
+
+namespace Slinky.Entities.Enemies {
+
+}
+```
 
 ## Classes
 
