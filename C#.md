@@ -176,31 +176,33 @@ private bool MethodName()
 
 # General Code
 
-### Return
+### Return Statment
 Statements that just return something should all be on the same line
 
 ```C#
 // Do this
-if (gameObject == null) return;
 
-public Vector3 MethodName(GameObject originObject, Target targetObject) 
+`if (gameObject == null) return;`
+
+`public Vector3 MethodName(GameObject originObject, Target targetObject) 
 {
     if (originObject == null) return Vector3.zero;
 
     return originObject.transform.position - targetObject.transform.position;
-}
+}`
 
 
 // Avoid this
-if (gameObject == null) 
-    return;
 
-if (gameObject == null) 
+`if (gameObject == null) 
+    return;`
+
+`if (gameObject == null) 
 {
     return;
-}
+}`
 
-public Vector3 MethodName(GameObject originObject, Target targetObject) 
+`public Vector3 MethodName(GameObject originObject, Target targetObject) 
 {
     if (originObject == null) 
     {
@@ -208,7 +210,7 @@ public Vector3 MethodName(GameObject originObject, Target targetObject)
     }
 
     return originObject.transform.position - targetObject.transform.position;
-}
+}`
 ```
 
 Statements that contain 
