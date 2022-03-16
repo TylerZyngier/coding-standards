@@ -99,7 +99,8 @@ Namespaces should follow file-system structure aka. file folder names
 
 ```C#
 // Example of a file at 'Enemy.cs' at 'Scripts/Entities/Enemies/' would have the namespace [RootNamespace]/Entities.Enemies
-namespace Slinky.Entities.Enemies {
+namespace Slinky.Entities.Enemies 
+{
     //...
 }
 ```
@@ -142,23 +143,19 @@ private bool loadingLevel;
 
 private void Awake()
 {
-    if (instance == null)
-    {
-        instance = this;
-    }
-    else
-    {
-        Destroy(this.gameObject);
-    }
+    //...
+}
+
+private void Update()
+{
+    //...
 }
 
 /// <Description> Custom Methods </Description>
 
-public void LoadNextLevel(bool loadingScreen = true)
+public void MethodName(bool varName = true)
 {
-    int nextSceneIndex = Utils.GlobalFunctions.GetActiveSceneIndex() + 1;
-
-    LoadLevel(nextSceneIndex, loadingScreen);
+    //...
 }
 ```
 
