@@ -5,16 +5,16 @@
 ### Access Modifiers
 
 #### Order access modifiers as seen below Use '[SerializeField] private' rather than 'public' modifier as often as possible
-```
-    public static varType varName;
+```C#
+public static varType varName;
     
-    public varType varName;
+public varType varName;
 
-    [SerializeField] private varType varName
+[SerializeField] private varType varName
 
-    internal varType varName;
+internal varType varName;
     
-    private varType _varName;
+private varType _varName;
 ```
 
 ### Naming Conventions
