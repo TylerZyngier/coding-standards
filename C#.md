@@ -1,4 +1,4 @@
-# These standards are geared towards Unity development as that is my main C# use case
+# These standards are geared towards Unity development
 
 ## Variables
 
