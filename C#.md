@@ -4,8 +4,8 @@
 
 ### Access Modifiers
 
-##### Order access modifiers as seen below
-##### Use '[SerializeField] private' rather than 'public' modifier as often as possible
+#### Order access modifiers as seen below Use '[SerializeField] private' rather than 'public' modifier as often as possible
+```
     public static varType varName;
     
     public varType varName;
@@ -15,6 +15,7 @@
     internal varType varName;
     
     private varType _varName;
+```
 
 ### Naming Conventions
 
@@ -52,7 +53,7 @@
     {there are of course other exceptions that I can't think of right now}
 
 #### Do not use Underscores in identifiers. 
-##### Exception: you can prefix private variables with an underscore.
+##### *Exception: you can prefix private variables with an underscore.*
     // Correct
     public WeaponType weaponType;
     public EnemyType enemyType;
