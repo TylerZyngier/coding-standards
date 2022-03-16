@@ -1,5 +1,5 @@
 # These standards are geared towards Unity development
-*//... is used to fill in for actual code*
+*'//...' is just used as filler for actual code*
 
 ## Variables
 
