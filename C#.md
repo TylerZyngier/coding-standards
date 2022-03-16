@@ -1,9 +1,11 @@
 # These standards are geared towards Unity development as that is my main C# use case
 
 ## Variables
+
 ### Access Modifiers
-#### Order access modifiers as seen below
-#### Use '[SerializeField] private' rather than 'public' modifier as often as possible
+
+##### Order access modifiers as seen below
+##### Use '[SerializeField] private' rather than 'public' modifier as often as possible
     public static varType varName;
     
     public varType varName;
