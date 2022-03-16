@@ -172,7 +172,7 @@ private void MethodName()
 ```
 
 ```C#
-private Bool MethodName()
+private float MethodName()
     => //...
 ```
 
