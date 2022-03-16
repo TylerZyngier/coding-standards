@@ -5,7 +5,7 @@
 
 ### Access Modifiers
 Access modifiers should be ordered as seen below  
-Use '[SerializeField] private' rather than 'public' modifier as often as possible
+Use the '**[SerializeField] private**' modifier rather than the '**public**' modifier as often as possible
 
 ```C#
 public static varType varName;
@@ -20,8 +20,7 @@ private varType _varName;
 ```
 
 ### Naming Conventions
-    
-#### Do not use Hungarian notation or any other type identification in identifiers
+Do not use Hungarian notation or any other type identification in identifiers
 
 ```C#
 // Correct
@@ -33,7 +32,7 @@ int iName;
 string strName;
 ```
 
-#### Do not use screaming caps
+Do not use screaming caps  
 *This includes 'const' and 'readonly' variables*
 
 ```C#
