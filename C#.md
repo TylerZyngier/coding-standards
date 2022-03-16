@@ -1,7 +1,7 @@
-# These standards are geared towards Unity development
+## These standards are geared towards Unity development
 *//... is just used here as filler for actual code*
 
-## Variables
+# Variables
 
 ### Access Modifiers
 Access modifiers should be ordered as seen below  
@@ -90,7 +90,7 @@ Int32 lastIndex;
 Boolean isSaved;
 ```
 
-## Namespaces
+# Namespaces
 
 ### Namespace structure
 Namespaces should follow file-system structure aka. file folder names
@@ -120,7 +120,7 @@ using LevelLoading.Editor;
 using LevelLoading.ScriptableObjects;
 ```
 
-## Classes
+# Classes
 
 ### Class sectioning
 Classes are sectioned off into 2 major sections Variables and Methods   
@@ -160,7 +160,7 @@ public void LoadNextLevel(bool loadingScreen = true)
 }
 ```
 
-## Methods
+# Methods
 
 ### Single Line Methods
 Methods with only one line of code should be written two lines and use the shorthand lambda expression "=>"  
@@ -174,7 +174,7 @@ private bool MethodName()
     => //...
 ```
 
-## General Code
+# General Code
 
 ### Return
 Statements that just return something should all be on the same line
