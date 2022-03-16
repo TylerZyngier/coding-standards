@@ -20,6 +20,7 @@ private varType _varName;
 ### Naming Conventions
     
 #### Do not use Hungarian notation or any other type identification in identifiers
+
 ```C#
 // Correct
 int name;
@@ -29,8 +30,10 @@ string name;
 int iName;
 string strName;
 ```
-  
-#### Do not use Screaming Caps for constants or readonly variables
+
+#### Do not use screaming caps
+*This includes 'const' and 'readonly' variables*
+
 ```C#
 // Correct
 public static const string StringName = "StringValue";
@@ -41,7 +44,7 @@ public static const string STRINGNAME = "StringValue";
 
 #### Avoid using Abbreviations.
 
-*Exceptions: abbreviations commonly used as names, such as Id, rb, and anim*
+***Exceptions:** abbreviations commonly used as names, such as Id, rb, and anim*
 
 ```C#
 // Correct
@@ -61,7 +64,8 @@ Animator anim;
 ```
 
 #### Do not use Underscores in identifiers. 
-##### *Exception: you can prefix private variables with an underscore.*
+**Exceptions:* you can prefix private variables with an underscore.*
+
 ```C#
 // Correct
 public WeaponType weaponType;
@@ -71,7 +75,7 @@ public EnemyType enemyType;
 public WeaponType weapon_Type;
 public EnemyType enemy_Type;
 
-// Exception
+// Exceptions
 private WeaponType _weaponType;
 ```
 
@@ -88,11 +92,23 @@ Int32 lastIndex;
 Boolean isSaved;
 ```
 
-## Namespace
-#### Namespaces should follow file system structure
-```C#
-// Ex. the file 'Enemy.cs' at 'Scripts/Entities/Enemies/' would have the namespace [Root]/Entities.Enemies
+## Namespaces
 
+#### Namespace structuring
+Namespaces should follow file system structure
+
+```C#
+// Example of a file at 'Enemy.cs' at 'Scripts/Entities/Enemies/' would have the namespace [RootNamespace]/Entities.Enemies
+namespace Slinky.Entities.Enemies {
+
+}
+```
+
+#### 'Using' structure
+Imported namespaces should be grouped from top to bottom as follows: 'System', 'Unity', 'User Defined' namespaces
+Groupings should be seperated by a whitespace, ordered from top to bottom shortest to longest, and grouped with other namespaces of the same root
+```C#
+// Example of a file at 'Enemy.cs' at 'Scripts/Entities/Enemies/' would have the namespace [RootNamespace]/Entities.Enemies
 namespace Slinky.Entities.Enemies {
 
 }
