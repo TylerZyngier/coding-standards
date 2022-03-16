@@ -39,7 +39,9 @@ public static const string StringName = "StringValue";
 public static const string STRINGNAME = "StringValue";
 ```
 
-#### Avoid using Abbreviations. Exceptions: abbreviations commonly used as names, such as Id, rb, and anim
+#### Avoid using Abbreviations. 
+*Exceptions: abbreviations commonly used as names, such as Id, rb, and anim*
+
 ```C#
 // Correct
 WeaponType weaponType;
