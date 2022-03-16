@@ -1,4 +1,5 @@
 # These standards are geared towards Unity development
+*//... is used to fill in for actual code*
 
 ## Variables
 
@@ -128,6 +129,7 @@ using LevelLoading.ScriptableObjects;
 Classes are sectioned off into 2 major sections Variables and Methods   
 The 'Methods' section is divided into 2 sub-categories, Unity Methods and Custom Methods  
 Sections are defined by commenting '/// <Description> *Section Name* </Description>'
+
 ```C#
 /// <Description> Variables </Description>
 
@@ -153,10 +155,24 @@ private void Update()
 
 /// <Description> Custom Methods </Description>
 
-public void MethodName(bool varName = true)
+public void LoadNextLevel(bool loadingScreen = true)
 {
-    //...
+    int nextSceneIndex = Utils.GlobalFunctions.GetActiveSceneIndex() + 1;
+
+    LoadLevel(nextSceneIndex, loadingScreen);
 }
 ```
 
 ## Methods
+
+### Single Line Methods
+Methods with only one line of code should be written two lines and use the shorthand lambda expression "=>"  
+This includes code with a return type such as bool, int, float, etc.
+
+```C#
+private void MethodName()
+    => //...
+
+private bool MethodName()
+    => //...
+```
