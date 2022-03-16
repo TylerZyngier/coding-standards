@@ -94,7 +94,7 @@ Boolean isSaved;
 
 ## Namespaces
 
-#### Namespace structuring
+### Namespace structuring
 Namespaces should follow file system structure
 
 ```C#
@@ -104,14 +104,21 @@ namespace Slinky.Entities.Enemies {
 }
 ```
 
-#### 'Using' structure
+### 'Using' structure
 Imported namespaces should be grouped from top to bottom as follows: 'System', 'Unity', 'User Defined' namespaces.  
 Groupings should be seperated by a whitespace, ordered from top to bottom shortest to longest, and grouped with other namespaces of the same root
-```C#
-// Example of a file at 'Enemy.cs' at 'Scripts/Entities/Enemies/' would have the namespace [RootNamespace]/Entities.Enemies
-namespace Slinky.Entities.Enemies {
 
-}
+```C#
+using System;
+using System.Collections;
+
+using UnityEngine;
+using UnityEngine.SceneManagement;
+
+using GameManagement;
+using LevelManagement;
+using LevelLoading.Editor;
+using LevelLoading.ScriptableObjects;
 ```
 
 ## Classes
