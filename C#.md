@@ -1,25 +1,20 @@
-### Class variable naming conventions
-### Use [Serialize Field] on same line preceding variable
-    const varType VarName;
-    public varType varName;
-    private varType _varName;
-    internal varType varName;
-    
-    [Seralize Field] private varType varName;
+# These standards are geared towards Unity development as that is my main C# use case
 
+## Class variables
 ### Seperate class variable groupings by whitespace
-    const varType VarName;
-    const varType VarName;
-    const varType VarName;
+### Order access modifiers as seen below
+### Use '[SerializeField] private' rather than 'public' as often as possible
+    public static varType varName;
     
     public varType varName;
-    public varType varName;
+
+    [SerializeField] private varType varName
+
+    internal varType varName;
     
     private varType _varName;
-    
-    internal varType varName;
-    internal varType varName;
-    internal varType varName;
+
+### Seperate 
     
 ### Do not use Hungarian notation or any other type identification in identifiers
     // Correct
@@ -76,20 +71,40 @@
     Boolean isSaved;
 
 ### Use PascalCasing for class names, method names and namespaces
-### Use same line brackets
-    namespace SlinkyUtils.Player.Combat {
-        public class ClassName {
-            public void MethodName() {
-                //...
-            }
-            public void MethodName() {
+### Use next line brackets
+    namespace Slinky.Player.Combat 
+    {
+        public class ClassName 
+        {
+            public void MethodName() 
+            {
                 //...
             }
         }
     }
 
-### Use camelCasing for local variables and method arguments
-### Use var keyword over specific variable type in local variables
+
+### Local Variables
+### Use camelCase for local variables and method arguments
+### Use specific variable keywords (ie. 'float', 'bool', 'int', 'GameObject', etc.) rather than 'var' when using local variables
     public void MethodName(VarType varName) {
         var itemCount = varName.Items.Count;
+    }
+
+
+### Use root namespace for all scripts
+    namespace Slinky.Player.Combat 
+    {
+        public class ClassName 
+        {
+            //...
+        }
+    }
+
+    namespace Slinky.LevelManagement 
+    {
+        public class ClassName 
+        {
+            //...
+        }
     }
