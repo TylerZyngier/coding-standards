@@ -105,7 +105,7 @@ namespace Slinky.Entities.Enemies {
 ```
 
 #### 'Using' structure
-Imported namespaces should be grouped from top to bottom as follows: 'System', 'Unity', 'User Defined' namespaces.
+Imported namespaces should be grouped from top to bottom as follows: 'System', 'Unity', 'User Defined' namespaces.  
 Groupings should be seperated by a whitespace, ordered from top to bottom shortest to longest, and grouped with other namespaces of the same root
 ```C#
 // Example of a file at 'Enemy.cs' at 'Scripts/Entities/Enemies/' would have the namespace [RootNamespace]/Entities.Enemies
