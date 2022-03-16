@@ -179,30 +179,38 @@ private bool MethodName()
 ### Return Statment
 Statements that just return something should all be on the same line
 
+Do these
+
 ```C#
-// Do this
+if (gameObject == null) return;
+```
 
-`if (gameObject == null) return;`
-
-`public Vector3 MethodName(GameObject originObject, Target targetObject) 
+```C#
+public Vector3 MethodName(GameObject originObject, Target targetObject) 
 {
     if (originObject == null) return Vector3.zero;
 
     return originObject.transform.position - targetObject.transform.position;
-}`
+}
+```
 
 
-// Avoid this
+Avoid these
 
-`if (gameObject == null) 
-    return;`
+```C#
+if (gameObject == null) 
+    return;
+```
 
-`if (gameObject == null) 
+```C#
+if (gameObject == null) 
 {
     return;
-}`
+}
+```
 
-`public Vector3 MethodName(GameObject originObject, Target targetObject) 
+```C#
+public Vector3 MethodName(GameObject originObject, Target targetObject) 
 {
     if (originObject == null) 
     {
@@ -210,7 +218,7 @@ Statements that just return something should all be on the same line
     }
 
     return originObject.transform.position - targetObject.transform.position;
-}`
+}
 ```
 
 Statements that contain 
